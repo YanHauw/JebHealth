@@ -1,0 +1,140 @@
+
+
+.friendreqPage{
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.friendreqpanel{
+    height: 92vh;
+    width: 100%;
+  }
+
+
+
+
+
+.friendreqList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 92vh;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.friendreqList::-webkit-scrollbar {
+    width: 10px;
+}
+  
+.friendreqList::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+.friendreqList::-webkit-scrollbar-thumb {
+background: #888; 
+
+}
+
+.friendreqList::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+
+
+.friendrequest{
+    display: flex;
+    margin-top: 3vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    background-color: white;
+    border-radius: 25px;
+    /* margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;  */
+    height: 14vh;
+    position: relative;
+    border: 2px lightgrey solid;
+    box-shadow: 2px 2px 7px 2px #cccccc;
+    width: 35vw;
+    padding-left: 10px;
+     padding-right: 10px;
+}
+
+
+.buttonRow{
+    display: flex;
+    margin-bottom: 1vh;
+}
+.acceptButton {
+    background-color: #1b3faa;
+    color: white; 
+    height: 3vh;
+    width: 12vw;
+    line-height: 3vh;
+    border: solid white 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: large;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    transition: 0.3s;
+    font-weight: 400;
+    margin-right: 1vw;
+}
+
+.acceptButton:hover{
+    background-color: #131f88;
+    transition: 0.3s;
+}
+
+.deleteButton {
+    background-color: white;
+    color: black; 
+    height: 3vh;
+    width: 12vw;
+    line-height: 3vh;
+    border: solid grey 1px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: large;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    transition: 0.3s;
+    font-weight: 400;
+}
+
+.deleteButton:hover{
+    background-color: #DDDDDD;
+    transition: 0.3s;
+}
+
+.friendname{
+    font: Arial;
+    font-weight: 700;
+    height: 8vh;
+    width: 8vw;
+    margin-top: 1vh;
+    font-size: 25px;
+    text-align: center;
+}
+
+#no-requests:link {
+    font-size: 20px;
+    color: black;
+}
+
+#no-requests:visited {
+    font-size: 20px;
+    color: black;
+}

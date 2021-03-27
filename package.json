@@ -1,0 +1,36 @@
+{
+  "name": "chatapp",
+  "version": "1.2.0",
+  "description": "Chat App for CS97",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.0.0",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.6.4",
+    "nodemon": "^2.0.7",
+    "npm": "^7.6.0",
+    "react-router-dom": "^5.2.0",
+    "uuid": "^8.3.2",
+    "yarn": "^1.22.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheDarkLord247/chatapp.git"
+  },
+  "author": "Milo, Sudhanshu, Aman, Yan, Kevin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheDarkLord247/chatapp/issues"
+  },
+  "homepage": "https://github.com/TheDarkLord247/chatapp#readme"
+}

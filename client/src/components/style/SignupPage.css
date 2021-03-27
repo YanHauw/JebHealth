@@ -1,0 +1,91 @@
+
+
+.signup{
+    height: 96vh;
+    display: flex;
+    margin-top: 4vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    background-color: #ffffff;
+}
+
+.signupform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: 35vh;
+    color: white;
+    box-shadow: 2px 3px 6px 4px #cccccc;
+}
+
+.signupField {
+    height: 3vh;
+    width: 12vw;
+    margin-top: 2vh;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    padding-left: 20px;
+}
+
+.signupButton {
+    height: 3.1vh;
+    width: 12.4vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+    background: #1b3faa;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.signupButton:hover {
+    cursor: pointer;
+    background: #032daa;
+    transition: 0.3s;
+}
+
+.signupError {
+    margin-top: 5px;
+    color: red;
+}
+
+#signup-logo{
+    height: 20vh;
+    margin-bottom: 20px;
+}
+
+#loginlink {
+	color: #0000EE;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#loginlink:hover {
+    color: rgb(56, 27, 138);
+    text-decoration: underline;
+}
+
+/* #loginlink:visited {
+	color: rgb(147, 28, 245);
+    text-decoration: underline;
+} */
+
+#contact{
+    padding-bottom: 10px; /*whatever the height of your footer is*/
+    position: fixed;
+    bottom: 0;
+}
+
+.contactlink {
+	color: black;
+}
+.contactlink:link {
+	color: black;
+}
+.contactlink:visited {
+	color: black;
+}
