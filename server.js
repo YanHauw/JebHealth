@@ -500,22 +500,6 @@ app.post('/change/password/:username', async (req, res) => {
 
 });
 
-/*=========================================================================== 
-POST: /latexRequest
-calls the python script that calls rTex's LaTeX rendering API
-===========================================================================*/
-app.post("/latexRequest", async (req, res) => {
-    const latex = await req.body.latex;
-    console.log('called', latex)
-    var spawn = require("child_process").spawn;
-    var request = spawn('python', ['latexRequest.py', latex]);
-    request.stderr.pipe(process.stderr);
-    request.stdout.pipe(process.stdout);
-    request.stdout.on('data', function (data) {
-        res.json({ filename: data.toString() }); //returns filename of converted latex
-    })
-});
-
 
 
 /*=========================================================================== 
