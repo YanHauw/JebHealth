@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import './style/SearchPage.css';
-import egg from '../images/paul.jpg';
 import {Redirect} from "react-router-dom";
 import {isLoggedIn, getUserInfo} from '../utils.js';
 

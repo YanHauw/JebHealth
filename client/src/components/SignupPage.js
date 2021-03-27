@@ -1,7 +1,7 @@
 import React from "react";
 import {Redirect} from "react-router-dom";
 import './style/SignupPage.css';
-import logo from '../images/logotest.png';
+import logo from '../images/logo-header.png';
 import { isLoggedIn } from '../utils.js';
 
 function DisplayErrors(props) {
