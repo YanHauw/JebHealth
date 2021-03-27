@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import './style/Nav.css';
 import {isLoggedIn} from '../utils.js';
 import IconSettings from '../images/icon_settings.svg';
-import IconInfo from '../images/icon_info.svg';
 import IconChat from '../images/icon_chat.svg';
 import IconSearch from '../images/icon_search.svg';
 import IconFriendReqs from '../images/friend_requests.svg';
-import Logo from '../images/logotest.png';
+import Logo from '../images/logo-header.png';
 
 export default class Nav extends React.Component {
     constructor(props) {
@@ -25,10 +24,8 @@ export default class Nav extends React.Component {
         {
             case '/chats': page = 'Chats'; break;
             case '/chatapp': page = 'Log In'; break;
-            case '/about': page = 'About'; break;
             case '/search': page = 'Search for users'; break;
             case '/settings/general': page = 'Settings'; break;
-            case '/settings/appearance': page = 'Settings'; break;
             case '/settings/signout': page = 'Settings'; break;
             case '/friendrequests': page = 'Friend requests'; break;
             case '/signup': page = 'Sign Up'; break;
@@ -54,9 +51,6 @@ export default class Nav extends React.Component {
                         <Link to="/signup" className="navButton" onClick={() => this.setState({curPage: 'Sign Up'})}>
                             Sign Up
                         </Link>
-                        <Link to="/about" className="navButton" onClick={() => this.setState({curPage: 'About'})}>
-                            <img src={IconInfo} className="navIcon"/>
-                        </Link>
                     </div>
                 </div>
             );
@@ -78,9 +72,6 @@ export default class Nav extends React.Component {
                         </Link>
                         <Link to="/settings/general" className="navButton" onClick={() => this.setState({curPage: 'Settings'})}>
                             <img src={IconSettings} className="navIcon"/>
-                        </Link>
-                        <Link to="/about" className="navButton" onClick={() => this.setState({curPage: 'About'})}>
-                            <img src={IconInfo} className="navIcon"/>
                         </Link>
                     </div>
                 </div>

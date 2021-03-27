@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
 import SettingsGeneral from './components/SettingsGeneral.js';
-import SettingsAppearance from './components/SettingsAppearance.js';
 import SettingsSignout from './components/SettingsSignout.js';
 import ChatWindow from './components/ChatWindow.js';
 import LoginPage from './components/LoginPage.js';
-import About from './components/About.js';
 import SignupPage from './components/SignupPage.js';
 import SearchPage from './components/SearchPage.js';
 import FriendRequests from './components/FriendRequests.js';
@@ -26,9 +24,6 @@ class App extends Component {
             <div id="alert-green" />
             <div id="alert-red" />
             <Switch>
-              <Route path="/about">
-                <About />
-              </Route>
               <Route path="/signup">
                 <SignupPage />
               </Route>
@@ -46,9 +41,6 @@ class App extends Component {
               </Route>
               <Route path="/settings/general">
                 <SettingsGeneral />
-              </Route>
-              <Route path="/settings/appearance">
-                <SettingsAppearance />
               </Route>
               <Route path="/settings/signout">
                 <SettingsSignout />

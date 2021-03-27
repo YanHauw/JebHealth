@@ -44,9 +44,6 @@ export default class Settings extends Component {
 						<Link to="/settings/general" className = "menu-button">
 							General
 						</Link>
-						<Link to="/settings/appearance" className = "menu-button">
-							Appearance
-						</Link>
 						<Link to="/settings/signout" className = "menu-button-active">
 							Signout
 						</Link>
