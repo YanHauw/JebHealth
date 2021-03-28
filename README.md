@@ -13,7 +13,7 @@ git clone https://github.com/YanHauw/JebHealth
 
 After this, enter the following command:
 ```
-cd chatapp
+cd JebHealth
 ```
 
 Now enter this command to install all our node dependencies:
