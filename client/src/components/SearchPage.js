@@ -129,7 +129,7 @@ export default class SearchPage extends Component {
             // generate the contact cards to be rendered
             renderedcards = contactList.map(contactcard => (contactcard['addstatus'] === 2) ?
 
-            <div className="contactcard-friend">
+            <div className="contact-friend">
                 <div className="contactname-friend">
                     {contactcard['user']}
                 </div>

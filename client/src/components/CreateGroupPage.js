@@ -134,7 +134,6 @@ export default class CreateGroupPage extends Component {
             return <Redirect to='/login' />;
         }
 
-        //receive this from the backend
         var contactList = this.state.curUserList
         var friendsList = contactList.filter(contactcard => contactcard['addstatus'] === 2)
 
@@ -162,8 +161,6 @@ export default class CreateGroupPage extends Component {
         //======================================================================
         let sortedIndexes = indexesToRemove.sort();
         let reversedIndexes = sortedIndexes.reverse();
-
-        
 
         for (let k in reversedIndexes)
         {
@@ -202,8 +199,8 @@ export default class CreateGroupPage extends Component {
         else{
             // generate the contact cards to be rendered
             renderedcontacts = friendsList.map(contactcard =>
-                <div className="friend-for-group-background" key={contactcard['user'] + '.1'}> 
-                    <div className="friend-for-group" key={contactcard['user'] + '.2'}> 
+                <div className="add-for-group-background" key={contactcard['user'] + '.1'}> 
+                    <div className="add-for-group" key={contactcard['user'] + '.2'}> 
                         {contactcard['user']}
                     </div>
                     <div 

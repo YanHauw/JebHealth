@@ -6,7 +6,7 @@
 .menu {
 	display: flex;
 	flex-direction: column;
-	background-color: #1b3faa;
+	background-color: #da8c58;
 	height: 96vh;
 	width: 13%;
 	margin-top: 4vh;
@@ -17,12 +17,12 @@
 	height: 6vh;
 	width: 100%;
 	text-align: left;
-	background-color: #1b3faa;
+	background-color: #da8c58;
 	text-indent: 15px;
 	line-height: 6vh;
 	text-decoration: none;
 	color: white;
-	border-bottom: 1px solid #163099;
+	border-bottom: 1px solid #be5e1e;
 	transition: 0.3s;
 }
 
@@ -31,12 +31,12 @@
 	height: 6vh;
 	width: 100%;
 	text-align: left;
-	background-color: #131f88;
+	background-color: #be5e1e;
 	text-indent: 15px;
 	line-height: 6vh;
 	text-decoration: none;
 	color: white;
-	border-bottom: 1px solid #163099;
+	border-bottom: 1px solid #be5e1e;
 
 }
 
@@ -46,7 +46,7 @@
 
 .menu-button:hover {
 	cursor:pointer;
-	background: #0d1a88;
+	background: #be5e1e;
 	transition: 0.3s;
 }
 
@@ -157,12 +157,12 @@
 	width: 40px;
 	margin-left: 1vw;
 	border-radius: 10px;
-	background-color: #e4c055;
+	background-color: #f87c29;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: 2vh 2vh;
 	background-image: url('../../images/icon_back.svg');
-	filter: invert(1);
+	/* filter: invert(1); */
 	transform: scaleX(-1) ;
 	border:none;
 	transition: 0.3s;
@@ -173,7 +173,7 @@
 	outline: none;
 }
 .settings-submit:hover {
-	background-color: #ece077;
+	background-color: #be5e1e;
 	transition: 0.3s;
 }
 

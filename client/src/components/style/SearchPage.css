@@ -87,14 +87,14 @@
     box-shadow: 2px 2px 7px 2px #cccccc;
 }
 
-.contactcard-friend {
+.contact-friend {
     display: flex;
     margin-top: 2vh;
     width: 20vw;
     height: 8vh;
     border-radius: 25px;
-    background:  #1b3faa;
-    border: 2px #1b3faa solid;
+    background:  #f87c29;
+    border: 2px #f87c29 solid;
     box-shadow: 2px 2px 7px 2px #cccccc;
 }
 
@@ -128,7 +128,7 @@
     align-items: center;
     color: white;
     font-weight: bold;
-    background:  #1b3faa;
+    background:  #f87c29;
 }
 
 .button-add {
@@ -141,8 +141,8 @@
     background-size: 2vh 2vh;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-color: #e4c055;
-    filter: invert(1);
+    background-color: #f87c29;
+    /* filter: invert(1); */
     cursor: pointer;
     border-radius: 15px;
     transform: 0.3s;

@@ -36,7 +36,7 @@
     margin-top: 2vh;
     margin-bottom: 1vh;
     border-radius: 10px;
-    background: #1b3faa;
+    background: #f87c29;
     color: white;
     border: none;
     transition: 0.3s;
@@ -44,7 +44,7 @@
 
 .signupButton:hover {
     cursor: pointer;
-    background: #032daa;
+    background: #be5e1e;
     transition: 0.3s;
 }
 
@@ -59,13 +59,13 @@
 }
 
 #loginlink {
-	color: #0000EE;
+	color: #f87c29;
     text-decoration: underline;
     text-align: center;
 }
 
 #loginlink:hover {
-    color: rgb(56, 27, 138);
+    color: #be5e1e;
     text-decoration: underline;
 }
 
@@ -81,11 +81,11 @@
 }
 
 .contactlink {
-	color: black;
+	color: #f87c29;
 }
 .contactlink:link {
-	color: black;
+	color: #f87c29;
 }
 .contactlink:visited {
-	color: black;
+	color: #be5e1e;
 }

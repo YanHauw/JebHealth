@@ -20,7 +20,7 @@
   align-items: center;
 }
 .contactsList{
-    background-color: #1b3faa;
+    background-color: #da8c58;
     height: 96vh;
     width: 100%;
     overflow-y: auto;
@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: left;
     font-size: large;
-    background-color: #1b3faa;
+    background-color: #da8c58;
     border-bottom: 1px solid #163099;
     border-right: none;
     /* border-radius: 5px; */
@@ -49,7 +49,7 @@
 
 .contact:hover{
     cursor: pointer;
-    background-color: #133086;
+    background-color: #be5e1e;
     transition: 0.3s
 }
 
@@ -59,7 +59,7 @@
     justify-content: center;
     align-items: left;
     font-size: large;
-    background-color: #131f88;
+    background-color: #be5e1e;
     border-bottom: 1px solid #163099;
     border-right: none;
     /* border-radius: 5px; */
@@ -178,7 +178,7 @@
 .sent{
     margin-left: 35%;
     margin-bottom: 10px;
-    background-color: #1b3faa;
+    background-color: #da8c58;
     max-width: 60%;
     padding: 4px;
     border-radius: 5px;
@@ -197,7 +197,7 @@
 .no-messages{
   max-width: 40%;
   margin-left: 30%;
-  background-color: #ff6c6c;
+  background-color: #da8c58;
   color: white;
   padding: 4px;
   border-radius: 25px;
@@ -210,7 +210,7 @@
 .no-chats{
   max-width: 40%;
   margin-left: 30%;
-  background-color: #1b3faa;
+  background-color: #da8c58;
   color: white;
   padding: 4px;
   border-radius: 25px;

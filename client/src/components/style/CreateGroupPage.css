@@ -55,7 +55,7 @@
 }
 
 .createButton {
-    background-color: white;
+    background-color: #f56b6b;
     color: black; 
     height: 3vh;
     width: 12vw;
@@ -75,7 +75,7 @@
 }
 
 .createButton:hover{
-    background-color: #DDDDDD;
+    background-color: #c53e98;
     transition: 0.3s;
 }
 
@@ -129,9 +129,46 @@
     width: 20vw;
     height: 8vh;
     border-radius: 25px;
+    background:  #f87c29;
+    border: 2px lightgrey solid;
+    box-shadow: 2px 2px 7px 2px #cccccc;
+}
+
+.friend-for-group {
+    margin-top: 1vh;
+    height: 6vh;
+    width: 14vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    line-height: 6vh;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    background:  #f87c29;
+}
+
+.add-for-group-background {
+    display: flex;
+    margin-top: 2vh;
+    width: 20vw;
+    height: 8vh;
+    border-radius: 25px;
     background:  white;
     border: 2px lightgrey solid;
     box-shadow: 2px 2px 7px 2px #cccccc;
+}
+
+.add-for-group {
+    margin-top: 1vh;
+    height: 6vh;
+    width: 14vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    line-height: 6vh;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    background:  white;
 }
 
 .contactcard-friend {
@@ -158,18 +195,7 @@
     background:  white;
 }
 
-.friend-for-group {
-    margin-top: 1vh;
-    height: 6vh;
-    width: 14vw;
-    margin-right: 1vw;
-    margin-left: 1vw;
-    line-height: 6vh;
-    align-items: center;
-    color: black;
-    font-weight: bold;
-    background:  white;
-}
+
 
 .button-add-to-group {
     height: 6vh;
@@ -181,8 +207,8 @@
     background-size: 2vh 2vh;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-color: #e4c055;
-    filter: invert(1);
+    background-color: #f87c29;
+    /* filter: invert(1); */
     cursor: pointer;
     border-radius: 15px;
     transform: 0.3s;
@@ -190,7 +216,7 @@
 }
 
 .button-add-to-group:hover{
-    background-color: #ece077;
+    background-color: #be5e1e;
     transition: 0.3s
 }
 
