@@ -1,6 +1,6 @@
 # JebHealth - Chat app
 
-<img src='./client/src/images/logo-header.png' width='310' height='185'/>
+<img src='./client/src/images/logo-header.png' width='310' height='100'/>
 <br/>
 
 <h2> Steps to run the app on your computer </h2>
