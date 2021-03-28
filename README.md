@@ -8,7 +8,7 @@
 To run this repository on your local computer, open the terminal/command line and navigate to the directory you wish to download the repository to.
 Then type this into your terminal or command line:
 ```
-git clone 
+git clone https://github.com/YanHauw/JebHealth
 ```
 
 After this, enter the following command:
