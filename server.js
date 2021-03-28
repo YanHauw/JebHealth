@@ -36,7 +36,7 @@ Database access information
 /* ENTER INFORMATION HERE */
 // the connection string to your Mongo Atlas Cluster along with username and password 
 // this can be copied off the connection page for the cluster
-const uri = "mongodb+srv://yanh:sheet1026@chatapp.ndg4j.mongodb.net/chat_app?retryWrites=true&w=majority";
+const uri = null;
 if (uri == null)
 {
     console.log("\n\n\n\n ERROR: No MongoDB cluster provided \n\n\n\n");
@@ -214,8 +214,9 @@ app.post("/sendfriendrequest", async (req, res) => {
 
 
 /*=========================================================================== 
-POST: /creategroup
+POST: /makegroups
 Create a group chat 
+This function was never tested. Failed to get fetch API working
 ===========================================================================*/
 app.post("/makegroups", async (req, res) => {
 
@@ -227,6 +228,9 @@ app.post("/makegroups", async (req, res) => {
 
     console.log(username, "is creating a group with ", friendname1, friendname2);
 
+    //Should not just immediately invoke createNewChat
+    // Need to have another helper function to check if a group chat of the
+    // members has already been created before
     successCode = await createNewChat(username, friendname1, friendname2);
 
     return res.json({ successCode: successCode });
@@ -861,7 +865,7 @@ async function removeFriendRequest(username, friendname) {
 }
 
 /*=========================================================================== 
-FUNCTION: createNewChat(username1, username2)
+FUNCTION: createNewChat(username1, username2, username3)
 creates an entry in the chat database for a chat between two new friends 
 called by confirmFriend() 
 ===========================================================================*/
@@ -877,6 +881,8 @@ async function createNewChat(username1, username2, username3) {
 
         var uniqueChatID = uuidv4(); // universally unique identifier for the chat id 
 
+        // If this function was invoked by the automatic functionality
+        // where a one-to-one chat is created after accepting a friend request
         if (username3 == null) 
         {
             new_chat = {
@@ -887,6 +893,8 @@ async function createNewChat(username1, username2, username3) {
         }
         else
         {
+            // A group chat was created, hence having 3 participants
+            // rather than 2
             console.log("Group chat created!");
             new_chat = {
                 chat_id: uniqueChatID,

@@ -90,10 +90,13 @@ export default class SearchPage extends Component {
         // render the button depending on the user's status
         switch (status) {
             case 0:
+                // No existing connection to other person
                 return(<div className="button-add" onClick={() => this.handleClick(user)}/>)
             case 1: 
+                // We/they already sent a friend request
                 return(<div className="button-pending"/>)
             case 2:
+                // Already friends
                 return(<div className="button-friend"/>)
         }
     }
@@ -104,7 +107,9 @@ export default class SearchPage extends Component {
             return <Redirect to='/login' />;
         }
 
-        //receive this from the backend
+        //receive the contact list from the backend
+        //curUserList is an array of objects where each object represents
+        //a user whose username matches our search substring
         var contactList = this.state.curUserList
         var index = -1;
         for(var i in contactList)
@@ -127,6 +132,7 @@ export default class SearchPage extends Component {
         }
         else{
             // generate the contact cards to be rendered
+            // addstatus is an object property that is first set in the backend in server.js
             renderedcards = contactList.map(contactcard => (contactcard['addstatus'] === 2) ?
 
             <div className="contact-friend">

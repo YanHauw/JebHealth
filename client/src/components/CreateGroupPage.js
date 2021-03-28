@@ -58,7 +58,7 @@ export default class CreateGroupPage extends Component {
     };
 
 
-
+    // This function is incomplete
     handleCreate = async (event) => 
     {
         if(this.state.friendsToAdd.length != 2)
@@ -74,6 +74,9 @@ export default class CreateGroupPage extends Component {
         else
         {
             let selectedfriends = this.state.friendsToAdd;
+
+            // This was the fetch API I failed to get working
+            //======================================================================
             const result = await fetch("/makegroups" , 
                     {
                         method: 'POST',
@@ -87,7 +90,7 @@ export default class CreateGroupPage extends Component {
                     })
                     /* this is the data being posted */
             });
-            console.log('success');
+            //======================================================================
 
             const res = await result.json();  /* this is the res sent by the backend of find users etc */
 
@@ -134,7 +137,12 @@ export default class CreateGroupPage extends Component {
             return <Redirect to='/login' />;
         }
 
+        //receive the contact list from the backend
+        //curUserList is an array of objects where each object represents
+        //a user whose username matches our search substring
         var contactList = this.state.curUserList
+
+        // Filter search results to find only users who are friends
         var friendsList = contactList.filter(contactcard => contactcard['addstatus'] === 2)
 
         var toAdd = this.state.friendsToAdd; // Creating a collection of names that will be added to the created group
@@ -144,6 +152,10 @@ export default class CreateGroupPage extends Component {
         // This array helps us know which users are already in the collection of names
         // So that we can make the search bar no longer display them as a result in subsequent searches
 
+
+        // Code that allows us to know which friend's names we no longer should
+        // display
+        //======================================================================
         for(var i in toAdd)
         {
             for(var j in friendsList)
@@ -156,6 +168,7 @@ export default class CreateGroupPage extends Component {
                 }
             }
         }
+        //======================================================================
 
         // Code that removes the already selected names from subsequent searches
         //======================================================================
@@ -176,6 +189,7 @@ export default class CreateGroupPage extends Component {
         else
         {
             // List of friends to be added to group chat
+            // Displayed on the right in front end
             friends = toAdd.map(toAdd =>
                 <div className="friend-for-group-background">
                     <div className="friend-for-group">
@@ -187,17 +201,20 @@ export default class CreateGroupPage extends Component {
 
         var renderedcontacts;
         var finalrender;
+        // if there the searched subtring returns no matches
         if((friendsList === undefined || friendsList.length == 0) && this.state.hasSearched){
             renderedcontacts = <div className="noresults">No users matching the search</div>;
             finalrender = <div className="searchresult">{renderedcontacts}</div>
         }
-        else if(this.state.friendsToAdd.length == 2)
+        else if(this.state.friendsToAdd.length == 2) 
         {
+            // I designed it such that we would keep group size to 3 for now
             renderedcontacts = <div className="noresults">The maximum group size is 3</div>;
             finalrender = <div className="searchresult">{renderedcontacts}</div>
         }
         else{
             // generate the contact cards to be rendered
+            // addstatus is an object property that is first set in the backend in server.js
             renderedcontacts = friendsList.map(contactcard =>
                 <div className="add-for-group-background" key={contactcard['user'] + '.1'}> 
                     <div className="add-for-group" key={contactcard['user'] + '.2'}> 
