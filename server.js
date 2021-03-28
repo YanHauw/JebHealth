@@ -163,10 +163,13 @@ find users with a particular username - used for searching and adding users
 ===========================================================================*/
 app.get("/findusers/:substring", async (req, res) => {
 
+    alert('success');
+
     curUser = req.session.username
     console.log(req.session.username, " is searching for users");
     console.log(req.params.substring, " is the entered substring");
 
+    // Finds all users whose username contains the entered substring
     users = await findUsers(req.params.substring);
 
     listOfUsernames = []
@@ -205,6 +208,26 @@ app.post("/sendfriendrequest", async (req, res) => {
     // Username is already confirmed to be in database during login page checking
     // There are only 2 options: Accept and Delete
     successCode = await sendFriendRequest(username, friendname);
+
+    return res.json({ successCode: successCode });
+})
+
+
+/*=========================================================================== 
+POST: /creategroup
+Create a group chat 
+===========================================================================*/
+app.post("/makegroups", async (req, res) => {
+
+    console.log(req.session.username, " created a group");
+
+    var username = req.body.username; // user sending the request
+    var friendname1 = req.body.friendname1;   // name of first friend
+    var friendname2 = req.body.friendname2;   // name of second friend
+
+    console.log(username, "is creating a group with ", friendname1, friendname2);
+
+    successCode = await createNewChat(username, friendname1, friendname2);
 
     return res.json({ successCode: successCode });
 })
@@ -843,8 +866,8 @@ creates an entry in the chat database for a chat between two new friends
 called by confirmFriend() 
 ===========================================================================*/
 // creates an entry in the chat database for a chat between two new friends 
-async function createNewChat(username1, username2) {
-    let returnCode;
+async function createNewChat(username1, username2, username3) {
+    let returnCode = 0;
     try {
         db = await MongoClient.connect(uri);
         console.log("Connected to database for new chat creation");
@@ -853,10 +876,23 @@ async function createNewChat(username1, username2) {
         chat_data = dbo.collection("chat_data");
 
         var uniqueChatID = uuidv4(); // universally unique identifier for the chat id 
-        new_chat = {
-            chat_id: uniqueChatID,
-            messages: [],
-            participants: [username1, username2]
+
+        if (username3 == null) 
+        {
+            new_chat = {
+                chat_id: uniqueChatID,
+                messages: [],
+                participants: [username1, username2]
+            }
+        }
+        else
+        {
+            console.log("Group chat created!");
+            new_chat = {
+                chat_id: uniqueChatID,
+                messages: [],
+                participants: [username1, username2, username3]
+            }
         }
 
         chat_data.insertOne(new_chat,
@@ -895,7 +931,7 @@ async function confirmFriend(username1, username2) {
         var dbo = db.db("chat_app");
         user_data = dbo.collection("user_data");
         //create new chat here
-        chatID = await createNewChat(username1, username2);
+        chatID = await createNewChat(username1, username2, null);
         const filter1 = { username: username1 };
         //push a new value to their notifcations friends
         const updateDocument1 = {

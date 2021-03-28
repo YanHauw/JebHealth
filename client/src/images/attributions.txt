@@ -15,3 +15,5 @@ check icon: https://www.flaticon.com/free-icon/tick_447147?term=checkmark&page=1
 back icon: https://www.flaticon.com/free-icon/arrow_507257?term=back&page=1&position=4&page=1&position=4&related_id=507257&origin=search
 image icon: https://www.flaticon.com/free-icon/image_739249?term=image&page=1&position=2&page=1&position=2&related_id=739249&origin=search
 latex icon: https://commons.wikimedia.org/wiki/File:LaTeX_logo.svg
+creategroupchats icon: https://freeicons.io/strategy-and-managemet/network-people-group-icon-952
+groupchats icon: https://www.flaticon.com/free-icon/add-group_1387940?term=add%20group&page=1&position=3&page=1&position=3&related_id=1387940&origin=tag
