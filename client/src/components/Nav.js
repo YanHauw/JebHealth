@@ -6,7 +6,6 @@ import IconSettings from '../images/icon_settings.svg';
 import IconChat from '../images/icon_chat.svg';
 import IconSearch from '../images/icon_search.svg';
 import IconFriendReqs from '../images/friend_requests.svg';
-import IconGroupChats from '../images/group_chats.png';
 import IconCreateGroups from '../images/makegroup.png';
 import Logo from '../images/logo-header.png';
 
@@ -33,7 +32,6 @@ export default class Nav extends React.Component {
             case '/signup': page = 'Sign Up'; break;
             case '/login': page = 'Log In'; break;
             case '/makegroups': page = 'Create group chats'; break;
-            case '/groupchats': page = 'Group Chats'; break;
             default: page = ''; break;
         }
         isLoggedIn().then(loggedIn => this.setState({loggedIn: loggedIn, curPage: page}));
@@ -67,9 +65,6 @@ export default class Nav extends React.Component {
                     <div className="page-title">{this.state.curPage}</div>
                         <Link to="/chats" className="navButton" onClick={() => this.setState({curPage: 'Chats'})}>
                             <img src={IconChat} className="navIcon"/>
-                        </Link>
-                        <Link to="/groupchats" className="navButton" onClick={() => this.setState({curPage: 'Group Chats'})}>
-                            <img src={IconGroupChats} className="navIcon"/>
                         </Link>
                         <Link to="/friendrequests" className="navButton" onClick={() => this.setState({curPage: 'Friend Requests'})}>
                             <img src={IconFriendReqs} className="navIcon"/>

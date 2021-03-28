@@ -38,7 +38,7 @@ cd ..
 
 <br />
 
-(**Important**) We expect that you have a MongoDB cluster already set up (we're not going to give you ours!). Go into server.js/Line: 39 and set
+(**Important**) I'll need you to have a MongoDB cluster already set up. Go into server.js/Line: 39 and set
  ```js
 const uri = (your connection string to the cluster) 
 ```
@@ -56,4 +56,4 @@ Yarn takes a while to start the dev server.
 
 <h2>Technology Stack</h2>
 
-This project was bootstrapped with [React](https://github.com/facebook/create-react-app), and we used [Express](https://expressjs.com/en/guide/routing.html) to set up end points and methods that received stimulus from our React components and conveyed and retrieved information from our [MongoDB](http://mongodb.com) collections. 
+This project was bootstrapped with [React](https://github.com/facebook/create-react-app), and used [Express](https://expressjs.com/en/guide/routing.html) to set up end points and methods that received stimulus from React components and conveyed and retrieved information from [MongoDB](http://mongodb.com) collections. 

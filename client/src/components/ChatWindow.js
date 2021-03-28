@@ -227,30 +227,6 @@ export default class ChatWindow extends Component {
 
 
                 if (sender === this.state.curUser) {
-                    if (type === "latex") {
-                        return (
-                            <div className="sent">
-                                <div className="messageText">
-                                    <img className="messageLatexSent" src={message} />
-                                </div>
-                                <div className="messageTimeSent">
-                                    {formattedTime}
-                                </div>
-                            </div>
-                        )
-                    } else if (type === "image") {
-                        return (
-                            <div className="sent">
-                                <div className="messageText">
-                                    <img className="messageImage" src={message} />
-                                </div>
-                                <div className="messageTimeSent">
-                                    {formattedTime}
-                                </div>
-                            </div>
-                        )
-                    }
-
                     return (
                         <div className="sent">
                             <div className="messageText">
@@ -263,29 +239,6 @@ export default class ChatWindow extends Component {
                     );
                 }
                 else {
-                    if (type === "latex") {
-                        return (
-                            <div className="received">
-                                <div className="messageText">
-                                    <img className="messageLatexReceived" src={message} />
-                                </div>
-                                <div className="messageTimeSent">
-                                    {formattedTime}
-                                </div>
-                            </div>
-                        )
-                    } else if (type === "image") {
-                        return (
-                            <div className="received">
-                                <div className="messageText">
-                                    <img className="messageImage" src={message} />
-                                </div>
-                                <div className="messageTimeSent">
-                                    {formattedTime}
-                                </div>
-                            </div>
-                        )
-                    }
                     return (
                         <div className="received">
                             <div className="messageText">
